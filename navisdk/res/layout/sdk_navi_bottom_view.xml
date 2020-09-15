@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--底部信息栏-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    >
+    <View
+        android:id="@+id/bottom_land_lind_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:background="#ddd"
+        />
+    <LinearLayout
+        android:id="@+id/navi_widget_footer_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_land_lind_view"
+        android:background="@drawable/bottombg"
+        android:clickable="true"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/browser_navi_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:text="退出"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:clickable="true"
+             />
+
+        <ImageView
+            android:id="@+id/navi_back_line"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/divier_grey" />
+
+        <FrameLayout
+            android:id="@+id/port_show_naving_info"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:clickable="false">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/dis_text_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="剩余"
+                    android:textColor="@color/black"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/port_restDistance"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/port_restDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="---KM"
+                    android:textColor="@color/black"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/port_distanceTimeText"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/dis_text_down"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/port_distanceTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="--时--钟"
+                    android:textColor="@color/black"
+                    android:textSize="20.0sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/port_restDistance"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/port_emulator_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="中速"
+                    android:textColor="@color/black"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/port_restDistance"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="-&#45;&#45;KM"-->
+                        <!--android:textSize="20.0sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/port_distanceTimeText"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="&#45;&#45;时&#45;&#45;钟"-->
+                        <!--android:textSize="20.0sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/dis_text_down"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="剩余距离"-->
+                        <!--android:textColor="#999"-->
+                        <!--android:textSize="13.0sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/time_text_down"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="剩余时间"-->
+                        <!--android:textColor="#999"-->
+                        <!--android:textSize="13.0sp" />-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/port_cur_road_name_view"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/port_curRoadName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="到达目的地附近，导航结束"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/port_reset_navi_car_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/navigation_go_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="继续导航"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/navigation_down_line"
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/divier_grey"
+            />
+
+        <TextView
+            android:id="@+id/browser_navi_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="设置"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/black"
+             />
+
+        <TextView
+            android:id="@+id/tv_emulator_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="暂停"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

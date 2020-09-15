@@ -1,0 +1,101 @@
+package com.sfmap.route.model
+
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+//            aidl.srcDirs = ['src']
+//            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+//            java.srcDirs = ['src','../common/src/com/sfmap']
+        }
+//        enforceUniquePackageName = false
+        // Move the tests to tests/java, tests/res, etc...
+        androidTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by NaviGuideWrapper similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    useLibrary 'org.apache.http.legacy'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //忽略引用包中的错误
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+    }
+
+    productFlavors {
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+//    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    //下面的jar必须是打包到aar里面的
+    api files(
+        'libs/hcicloud-8.1.jar',
+        'libs/hcicloud_player-8.1.jar',
+        'libs/xunfei-tts.jar',
+        'libs/yunzhiyin-tts.jar'
+    )
+
+    implementation files('libs/annotations.jar')
+
+
+    implementation project(':mapsdk')
+    //implementation 'com.sf.lss:sf-lss-nloc-android:1.3.8'
+
+
+    implementation('com.jakewharton:butterknife:8.6.0') {
+        exclude module: 'support-compat'
+    }
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    implementation 'com.tencent.bugly:crashreport:3.2.33'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+}

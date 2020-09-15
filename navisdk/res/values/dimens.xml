@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="font_12">12.0sp</dimen>
+    <dimen name="font_24">24.0sp</dimen>
+    <dimen name="font_20">20.0sp</dimen>
+    <dimen name="hud_left_width">210dp</dimen>
+</resources>

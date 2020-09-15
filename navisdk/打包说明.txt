@@ -1,0 +1,5 @@
+打包步骤：
+1，先把工程打包apk,把apk包里只留res,manifest,resources.arse,META，四个文件，apk后缀改为png或data,放到sdk工程assets目录
+2，在ResourcesUtil类中更改变量值isBuilded，并更改该类底部R引用值为int值（现已添加好，只需要放开对应代码即可，若有更改布局，或资源，需更改对应int值）
+3，sdk工程build.gradle文件中开启混淆，在提示符窗口运行命令，gradlew doNaviJar  进行混淆编译打包
+4,把编译完的jar包放入demo即可

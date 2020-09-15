@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 阴影部分的Item图像定义 -->
+    <!-- 个人觉得更形象的表达：top代表下边的阴影高度，left代表右边的阴影宽度。其实也就是相对应的offset，solid中的颜色是阴影的颜色，也可以设置角度等等 -->
+
+    <item
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+
+            <!--
+            Android:angle 渐变角度，0从左到右，90表示从下到上，数值为45的整数倍，默认为0；
+            Android:type  渐变的样式 liner线性渐变 radial环形渐变 sweep
+           渐变颜色 0F000000 -> 4A9c9ca0
+            -->
+            <gradient
+                android:angle="270"
+                android:centerColor="#4A9c9ca0"
+                android:centerX="100%"
+                android:centerY="100%"
+                android:endColor="#4A9c9ca0"
+                android:startColor="#0F000000"
+                android:type="linear"/>
+
+            <corners
+                android:bottomLeftRadius="21dp"
+                android:bottomRightRadius="21dp"
+                android:topLeftRadius="21dp"
+                android:topRightRadius="21dp"/>
+        </shape>
+    </item>
+    <!-- 背景部分的Item图像定义 -->
+    <!-- 形象的表达：bottom代表背景部分在上边缘超出阴影的高度，right代表背景部分在左边超出阴影的宽度（相对应的offset） -->
+    <item
+        android:bottom="2dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+
+            <gradient
+                android:angle="0"
+                android:endColor="#FFf"
+                android:startColor="#FFf"/>
+
+            <corners
+                android:bottomLeftRadius="21dp"
+                android:bottomRightRadius="21dp"
+                android:topLeftRadius="21dp"
+                android:topRightRadius="21dp"/>
+        </shape>
+    </item>
+</layer-list>

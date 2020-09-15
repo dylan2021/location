@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="导航参数设置"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#d9000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_task_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:text="111"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:leftText="任务ID" />
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_dirver_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:text="test"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_task_id"
+            app:leftText="司机ID" />
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_car_plate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:text="鄂A12341"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_dirver_id"
+            app:leftText="车牌号" />
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_start_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:text="0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_car_plate"
+            app:leftText="起点网点编号" />
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_end_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:text="0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_start_num"
+            app:leftText="终点网点编号" />
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_start_lat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:text="22.52454"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_start_lon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_end_num"
+            app:leftText="起点Lat" />
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_start_lon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:text="113.9399"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAddStart"
+            app:layout_constraintStart_toEndOf="@+id/edit_start_lat"
+            app:layout_constraintTop_toTopOf="@+id/edit_start_lat"
+            app:leftText="起点Lon" />
+
+        <ImageButton
+            android:id="@+id/buttonAddStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_start_lon"
+            app:layout_constraintTop_toTopOf="@+id/edit_start_lon" />
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_end_lat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:text="22.98387"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/edit_end_lon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_start_lat"
+            app:leftText="终点Lat" />
+
+
+        <com.sf.collect.myapplication.AutoEditTextView
+            android:id="@+id/edit_end_lon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:inputType="numberDecimal"
+            android:text="113.7194"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAddEnd"
+            app:layout_constraintStart_toEndOf="@+id/edit_end_lat"
+            app:layout_constraintTop_toBottomOf="@+id/edit_start_lat"
+            app:leftText="终点Lon" />
+
+
+        <ImageButton
+            android:id="@+id/buttonAddEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_end_lon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_start_lat" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_go_navi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="开始规划"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:clickable="true"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/img_back_route_top"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="10dp"
+        android:src="@drawable/title_bar_back"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/con_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/route_top_shape"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/img_back_route_top"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_route_start"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/route_start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.sfmap.map.navi.CustomEditText
+            android:id="@+id/ed_route_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:focusable="true"
+            android:gravity="left"
+            android:hint="起始点"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:selectAllOnFocus="true"
+            android:text=""
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_route_start"
+            app:layout_constraintLeft_toRightOf="@id/img_route_start"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line"
+            app:layout_constraintTop_toTopOf="@id/img_route_start" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="#e1e1e1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintLeft_toRightOf="@id/img_route_start"
+            app:layout_constraintRight_toLeftOf="@id/guide_line"
+            app:layout_constraintTop_toBottomOf="@+id/ed_route_start" />
+
+        <com.sfmap.map.navi.CustomEditText
+            android:id="@+id/ed_route_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:focusable="true"
+            android:hint="终点"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:selectAllOnFocus="true"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/view_divider"
+            app:layout_constraintRight_toLeftOf="@+id/guide_line"
+            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+
+        <ImageView
+            android:id="@+id/img_route_end"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="-4dp"
+            android:src="@drawable/route_end"
+            app:layout_constraintBottom_toBottomOf="@id/ed_route_end"
+            app:layout_constraintEnd_toEndOf="@+id/img_route_start"
+            app:layout_constraintRight_toLeftOf="@+id/ed_route_end"
+            app:layout_constraintStart_toStartOf="@+id/img_route_start"
+            app:layout_constraintTop_toTopOf="@id/ed_route_end" />
+
+        <com.sfmap.map.navi.DashedLineView
+            android:id="@+id/img_line"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layerType="software"
+            android:src="@drawable/line_vertical"
+            app:layout_constraintBottom_toTopOf="@id/img_route_end"
+            app:layout_constraintLeft_toLeftOf="@id/img_route_start"
+            app:layout_constraintRight_toRightOf="@id/img_route_start"
+            app:layout_constraintTop_toBottomOf="@id/img_route_start" />
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_add_mid"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/add_mid"-->
+        <!--android:visibility="gone"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintHorizontal_chainStyle="spread"-->
+        <!--app:layout_constraintLeft_toRightOf="@id/guide_line"-->
+        <!--app:layout_constraintRight_toLeftOf="@id/img_switch_route"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img_switch_route"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/switch_start_end"-->
+        <!--android:visibility="gone"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toRightOf="@id/img_add_mid"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<android.support.constraint.Group-->
+        <!--android:id="@+id/group_mid1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--app:constraint_referenced_ids="ed_route_mid1,view_divider1"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<android.support.constraint.Group-->
+        <!--android:id="@+id/group_mid2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--app:constraint_referenced_ids="ed_route_mid2,view_divider2"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<android.support.constraint.Group-->
+        <!--android:id="@+id/group_mid3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--app:constraint_referenced_ids="ed_route_mid3,view_divider3"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    </android.support.constraint.ConstraintLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_route_bike"-->
+        <!--android:layout_width="85dp"-->
+        <!--android:layout_height="23dp"-->
+        <!--android:background="@drawable/route_car_shape"-->
+        <!--android:drawableRight="@drawable/route_bike_icon"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:text="骑行"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintHorizontal_chainStyle="spread"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toLeftOf="@id/tv_route_foot"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/con_top" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_route_foot"-->
+        <!--android:layout_width="85dp"-->
+        <!--android:layout_height="23dp"-->
+        <!--android:drawableRight="@drawable/route_bike_icon"-->
+        <!--android:gravity="center"-->
+        <!--android:text="步行"-->
+        <!--android:textColor="#e1e1e1"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/tv_route_bike"-->
+        <!--app:layout_constraintLeft_toRightOf="@id/tv_route_bike"-->
+        <!--app:layout_constraintRight_toLeftOf="@id/tv_route_truck"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/tv_route_bike" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_route_truck"-->
+        <!--android:layout_width="85dp"-->
+        <!--android:layout_height="23dp"-->
+        <!--android:drawableRight="@drawable/route_bike_icon"-->
+        <!--android:gravity="center"-->
+        <!--android:text="货车"-->
+        <!--android:textColor="#e1e1e1"-->
+        <!--android:textSize="13sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/tv_route_foot"-->
+        <!--app:layout_constraintLeft_toRightOf="@id/tv_route_foot"-->
+        <!--app:layout_constraintRight_toLeftOf="@id/tv_route_car"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/tv_route_foot" />-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_route_car"-->
+        <!--android:layout_width="85dp"-->
+        <!--android:layout_height="23dp"-->
+        <!--android:drawableRight="@drawable/route_bike_icon"-->
+        <!--android:gravity="center"-->
+        <!--android:text="驾车"-->
+        <!--android:textColor="#e1e1e1"-->
+        <!--android:textSize="13sp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/tv_route_truck"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/tv_route_truck"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/tv_route_truck" />-->
+
+
+    <!--<android.support.constraint.Group-->
+        <!--android:id="@+id/group_tool"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="visible"-->
+        <!--app:constraint_referenced_ids="tv_route_foot,tv_route_bike,tv_route_truck,tv_route_car"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+</android.support.constraint.ConstraintLayout>

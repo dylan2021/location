@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_request_dialog_title">提示</string>
+    <string name="permission_request_dialog_message"><![CDATA[定位服务需要你的授权才可以运行，请在应用信息页->权限页里打开需要的权限]]></string>
+</resources>

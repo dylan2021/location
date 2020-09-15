@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <com.sfmap.api.navi.view.HudMirrorImage
+        android:id="@+id/HudMirrosImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp">
+
+            <RelativeLayout
+                android:id="@+id/crossImage_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <!--路口放大图-->
+                <com.sfmap.api.navi.view.NaviRoadEnlargeView
+                    android:id="@+id/hud_enlarge_road_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:visibility="gone"
+                    android:layout_alignBottom="@+id/hud_enlarge_road_layout"
+                    android:src="@drawable/hud_cross_close_normal" />
+
+                <ProgressBar
+                    android:id="@+id/hud_cross_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_bar_layer" />
+            </RelativeLayout>
+            <!--车道线-->
+            <com.sfmap.api.navi.view.DriveWayView
+                android:id="@+id/hud_driveWayViewInNaviView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/crossImage_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mid_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_info_layout"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/nextRoadDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="---"
+                    android:textColor="#ffffffff"
+                    android:textSize="36.0sp" />
+
+                <TextView
+                    android:id="@+id/hud_DistanceUnitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/nextRoadDistanceText"
+                    android:layout_marginBottom="7dp"
+                    android:layout_toRightOf="@+id/nextRoadDistanceText"
+                    android:text=" 公里"
+                    android:textColor="#ffffffff"
+                    android:textSize="20.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/left_eye_camera_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical"
+                    >
+
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    >
+                    <TextView
+                        android:id="@+id/left_speed_text"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/hud_speed_bg"
+                        android:fitsSystemWindows="true"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="35.0sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/left_eye_camera_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        android:background="@drawable/electronic_eye" />
+                    <TextView
+                        android:id="@+id/hud_eye_speed_dis_text"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/hud_camera_distance"
+                        android:gravity="center"
+                        android:text="150米"
+                        android:textColor="@color/white"
+                        android:textSize="22.0sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+<TextView
+    android:id="@+id/left_eye_dis_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/left_eye_camera_layout"
+    android:layout_alignLeft="@+id/left_eye_camera_layout"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:text=""
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="#fff"
+    />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/roadsignimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:fitsSystemWindows="true" />
+<LinearLayout
+    android:id="@+id/camera_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="30dp"
+    >
+
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    >
+                    <TextView
+                        android:id="@+id/limitSpeedTextView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/hud_speed_bg"
+                        android:fitsSystemWindows="true"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="35.0sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:id="@+id/eys_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        android:background="@drawable/electronic_eye" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/right_eye_dis_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/camera_layout"
+                    android:layout_alignLeft="@+id/camera_layout"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    />
+</LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/hud_nextActionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/nextRoadNameText"
+                    android:layout_marginBottom="3dp"
+                    android:text="进入 "
+                    android:textColor="#ffffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/nextRoadNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/hud_nextActionText"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="-----"
+                    android:textColor="#ffffffff"
+                    android:textSize="36sp" />
+
+            </RelativeLayout>
+            <!--<LinearLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5.0dip"-->
+            <!--android:gravity="right"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="5.0dip"-->
+            <!--android:layout_marginRight="5.0dip"-->
+            <!--android:src="@drawable/ap" />-->
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="80.0dip"
+            android:layout_marginRight="80dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/bottom_dis_time_layout"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/restDistanceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="---公里"
+                        android:textColor="#ff1AAE72"
+                        android:textSize="@dimen/font_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="剩余距离 "
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/font_12" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/restDistanceTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="---分钟"
+                        android:textColor="#ff1AAE72"
+                        android:textSize="@dimen/font_24" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="剩余时间 "
+                        android:textColor="#ff999999"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/waitGpsHUDLy"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                android:layout_marginBottom="50dp"
+                android:indeterminateDrawable="@drawable/nav_gps_progressbar_style" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:text="GPS定位中\n请行驶至开阔地带"
+                android:textColor="#e8e8e8"
+                android:textSize="36.0sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.sfmap.api.navi.view.HudMirrorImage>
+
+    <!--镜像-->
+    <FrameLayout
+        android:id="@+id/hudmirrortitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/title_btn_goback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back_btn_bg_selector"
+            android:contentDescription="返回" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center">
+
+            <TextView
+                android:id="@+id/title_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="镜像"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_20"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:clickable="true"
+                android:contentDescription="镜像" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>

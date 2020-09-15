@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textcolorAccent">#99000000</color>
+    <!--提示语，三级颜色 30透明度-->
+    <color name="textcolorTip">#4d000000</color>
+    <color name="colorMyStyle">#2ca347</color>
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+</resources>

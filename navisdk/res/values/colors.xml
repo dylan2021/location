@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="grey"> #ebebeb</color>
+    <color name="black"> #000000</color>
+    <color name="white"> #FFFFFF</color>
+    <color name="darkyellow"> #FFCC33</color>
+    <color name="progress_background">#454545</color>
+    <color name="divier_grey">#e1e1e1</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#2a72f0</color>
+    <color name="green">#00923f</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--标题，一级颜色 85透明度-->
+    <color name="textColorPrimary">#d9000000</color>
+    <!--正文，二级颜色 60透明度-->
+    <color name="textcolorAccent">#99000000</color>
+    <!--提示语，三级颜色 30透明度-->
+    <color name="textcolorTip">#4d000000</color>
+    <color name="colorMyStyle">#2ca347</color>
+    <color name="background">#f5f5f5</color>
+    <color name="c3_color">#c3c3c3</color>
+    <color name="reg_green_light_color">#8B8B8B </color>
+    <color name="box_red">#E1022B</color>
+    <color name="light_light_gray">#E1E1E1</color>
+    <color name="gary_frame">#eff1f3</color>
+</resources>

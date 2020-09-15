@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/constraint_common_title"
+        layout="@layout/common_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+     />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_confirm"
+        android:layout_below="@id/constraint_common_title"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1、导航过程中是否出现过闪退？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_one_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.有"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_one_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.无"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="2、导航过程中是否出现过卡死？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_seventeen_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.有"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_seventeen_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.无"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="3、输入任务始发地、目的地地址信息时，搜索结果是否准确？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_two_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_two_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="4、输入任务始发地、目的地获取的路线是否合理？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_thire_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.合理"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_thire_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不合理"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="5、偏航判断是否准确？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_four_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_four_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_four_thire"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="C.无偏航"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="6、偏航后路线规划是否合理？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_five_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.合理"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_five_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不合理"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_five_thire"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="C.无偏航"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="7、路口播报是否准确，例如“直行、左转、 右转”等语音提醒？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_six_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_six_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不准确"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="8、路口播报是否及时？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_seven_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.及时"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_seven_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.不及时"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="9、是否有准确的路口放大图出现？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_eight_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="A.有"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+        <TextView
+            android:id="@+id/tv_eight_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:padding="4dp"
+            android:gravity="center"
+            android:text="B.无"
+            android:textColor="@drawable/text_click_selector"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10、摄像头播报是否准确，例如“前方xx米有测速摄像头”等语言提示？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_nine_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.准确"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_nine_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.不准确"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11、车道指引播报是否准确，例如“请走中间X车道/右侧车道”等语音提醒？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_ten_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.准确"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_ten_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.不准确"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12、车道指引播报是否及时？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_eleven_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.及时"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_eleven_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.不及时"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="13、语音提示内容是否合理？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_twelve_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.合理"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_twelve_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.播报太少"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_twelve_thire"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="C.播报太多"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="14、导航过程中地图显示是否正常？"
+        android:textColor="@drawable/text_click_selector"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_thirteen_one"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="A.正常"
+            android:textColor="@drawable/text_click_selector" />
+
+        <TextView
+            android:id="@+id/tv_thirteen_two"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/choose_type_selector"
+            android:drawableRight="@drawable/btn_error_choose_selector"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="B.不正常"
+            android:textColor="@drawable/text_click_selector" />
+
+    </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="15、该地图还需优化的功能项？"-->
+            <!--android:textColor="@drawable/text_click_selector"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="14sp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edit_fiveteen"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="top"-->
+            <!--android:hint="请输入您的建议..."-->
+            <!--android:textColor="@color/black"-->
+            <!--android:maxLength="200"-->
+            <!--android:minLines="4"-->
+            <!--android:textSize="13sp" />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15、对于本次导航是否有其他建议，是否存在其他问题？"
+            android:textColor="@drawable/text_click_selector"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_fiveteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="top"
+            android:hint="请输入其他问题..."
+            android:textColor="@color/black"
+            android:maxLength="200"
+            android:minLines="4"
+            android:textSize="13sp" />
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_confirm_selector"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+</RelativeLayout>
